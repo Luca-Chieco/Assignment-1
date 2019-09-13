@@ -14,5 +14,4 @@
         <include layout="@layout/card2_content" />
         <include layout="@layout/card3_content" />
     </LinearLayout>
-
 </ScrollView>

@@ -28,7 +28,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/card2_title"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@drawable/hardwood2" />
 
     <TextView
         android:id="@+id/card2_price"
