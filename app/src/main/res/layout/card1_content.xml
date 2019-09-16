@@ -25,10 +25,13 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
+        android:adjustViewBounds="false"
         android:contentDescription="@string/card1_Title"
+        android:cropToPadding="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/card1_title"
+        app:srcCompat="@drawable/hardwood1"
         tools:srcCompat="@drawable/hardwood1" />
 
     <TextView
@@ -36,7 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="8dp"
         android:text="@string/card1_Price"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,7 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="8dp"
         android:text="@string/card1_Description"
         android:textAlignment="center"
@@ -61,7 +64,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="8dp"
         android:text="@string/startValue"
         app:layout_constraintEnd_toEndOf="parent"
@@ -110,4 +113,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/card1_quantity"
         app:layout_constraintTop_toBottomOf="@+id/card1_quantity" />
+
 </android.support.constraint.ConstraintLayout>
