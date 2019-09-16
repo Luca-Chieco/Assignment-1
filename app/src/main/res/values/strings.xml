@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">ChiecoShop</string>
+    <string name="price_before_taxes">Price Before Taxes</string>
+    <string name="tps_tax">TPS Tax</string>
+    <string name="price_after_taxes">Price After Taxes</string>
+    <string name="tvq">TVQ</string>
+    <string name="thanks_for_using_the_app">Thanks for using the app!</string>
+    <string name="card1_Title">Dark Brown Oak</string>
+    <string name="card1_Price">7.00</string>
+    <string name="card1_Description">Enhance your home with beautiful hardwood flooring that fits your budget. Full of abundant character and color variation.</string>
+    <string name="card2_Title">White Birch</string>
+    <string name="card2_Price">6.00</string>
+    <string name="card2_Description">This 5-ply cross grain engineered hardwood flooring is made from genuine domestic white birch hardwood and is for indoor, residential use.</string>
+    <string name="card3_Title">Red Cherry</string>
+    <string name="card3_Price">8.00</string>
+    <string name="card3_Description">The natural styling of this durable, traditional cherry hardwood flooring creates a sense of comfort and serenity bringing the outside in.</string>
+    <string name="button_Add">Add</string>
+    <string name="button_Remove">Remove</string>
+    <string name="startValue">0</string>
+    <string name="instructions">Scroll through the items, and clcik on what you\'d like to add to your cart.</string>
+    <string name="welcome">Welcome to the shop!</string>
+    <string name="buttonStart">Start</string>
+
 </resources>
