@@ -20,5 +20,6 @@
     <string name="instructions">Scroll through the items, and click on what you\'d like to add to your cart.</string>
     <string name="welcome">Welcome to the shop!</string>
     <string name="buttonStart">Start</string>
+    <string name="button_Proceed">Proceed to Checkout</string>
 
 </resources>
