@@ -96,7 +96,8 @@
         app:layout_constraintBottom_toTopOf="@+id/card3_subtotal"
         app:layout_constraintEnd_toStartOf="@+id/card3_quantity"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card3_quantity" />
+        app:layout_constraintTop_toBottomOf="@+id/card3_quantity"
+        android:onClick="increaseCard3"/>
 
     <Button
         android:id="@+id/card3_decreaseButton"
@@ -110,5 +111,6 @@
         app:layout_constraintBottom_toTopOf="@+id/card3_subtotal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/card3_quantity"
-        app:layout_constraintTop_toBottomOf="@+id/card3_quantity" />
+        app:layout_constraintTop_toBottomOf="@+id/card3_quantity"
+        android:onClick="decreaseCard3"/>
 </android.support.constraint.ConstraintLayout>
