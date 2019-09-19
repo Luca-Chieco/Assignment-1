@@ -19,7 +19,6 @@ public class MenuActivity extends AppCompatActivity {
     private double quantityTotalCard1;
     private double quantityTotalCard2;
     private double quantityTotalCard3;
-    private double totalPrice;
 
 
     @Override
@@ -34,31 +33,31 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     public void increaseCard1(View view) {
-        TextView quantityText = (TextView) findViewById(R.id.card1_quantity);
+        TextView quantityText = findViewById(R.id.card1_quantity);
         quantityCard1 = Integer.parseInt(quantityText.getText().toString());
         quantityCard1++;
         quantityText.setText(Integer.toString(quantityCard1));
 
-        TextView priceText = (TextView) findViewById(R.id.card1_price);
+        TextView priceText = findViewById(R.id.card1_price);
         priceCard1 = Double.parseDouble(priceText.getText().toString());
 
-        TextView quantityTotalText = (TextView) findViewById(R.id.card1_subtotal);
+        TextView quantityTotalText = findViewById(R.id.card1_subtotal);
         quantityTotalCard1 = Double.parseDouble(quantityTotalText.getText().toString());
         quantityTotalCard1 += priceCard1;
         quantityTotalText.setText(Double.toString(quantityTotalCard1).format("%.2f", quantityTotalCard1));
     }
 
     public void decreaseCard1(View view) {
-        TextView quantityText = (TextView) findViewById(R.id.card1_quantity);
+        TextView quantityText = findViewById(R.id.card1_quantity);
         quantityCard1 = Integer.parseInt(quantityText.getText().toString());
         if (quantityCard1 > 0) {
             quantityCard1--;
             quantityText.setText(Integer.toString(quantityCard1));
 
-            TextView priceText = (TextView) findViewById(R.id.card1_price);
+            TextView priceText = findViewById(R.id.card1_price);
             priceCard1 = Double.parseDouble(priceText.getText().toString());
 
-            TextView quantityTotalText = (TextView) findViewById(R.id.card1_subtotal);
+            TextView quantityTotalText = findViewById(R.id.card1_subtotal);
             quantityTotalCard1 = Double.parseDouble(quantityTotalText.getText().toString());
             quantityTotalCard1 -= priceCard1;
             quantityTotalText.setText(Double.toString(quantityTotalCard1).format("%.2f", quantityTotalCard1));
@@ -66,31 +65,31 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     public void increaseCard2(View view) {
-        TextView quantityText = (TextView) findViewById(R.id.card2_quantity);
+        TextView quantityText = findViewById(R.id.card2_quantity);
         quantityCard2 = Integer.parseInt(quantityText.getText().toString());
         quantityCard2++;
         quantityText.setText(Integer.toString(quantityCard2));
 
-        TextView priceText = (TextView) findViewById(R.id.card2_price);
+        TextView priceText = findViewById(R.id.card2_price);
         priceCard2 = Double.parseDouble(priceText.getText().toString());
 
-        TextView quantityTotalText = (TextView) findViewById(R.id.card2_subtotal);
+        TextView quantityTotalText = findViewById(R.id.card2_subtotal);
         quantityTotalCard2 = Double.parseDouble(quantityTotalText.getText().toString());
         quantityTotalCard2 += priceCard2;
         quantityTotalText.setText(Double.toString(quantityTotalCard2).format("%.2f", quantityTotalCard2));
     }
 
     public void decreaseCard2(View view) {
-        TextView quantityText = (TextView) findViewById(R.id.card2_quantity);
+        TextView quantityText = findViewById(R.id.card2_quantity);
         quantityCard2 = Integer.parseInt(quantityText.getText().toString());
         if (quantityCard2 > 0) {
             quantityCard2--;
             quantityText.setText(Integer.toString(quantityCard2));
 
-            TextView priceText = (TextView) findViewById(R.id.card2_price);
+            TextView priceText = findViewById(R.id.card2_price);
             priceCard2 = Double.parseDouble(priceText.getText().toString());
 
-            TextView quantityTotalText = (TextView) findViewById(R.id.card2_subtotal);
+            TextView quantityTotalText = findViewById(R.id.card2_subtotal);
             quantityTotalCard2 = Double.parseDouble(quantityTotalText.getText().toString());
             quantityTotalCard2 -= priceCard2;
             quantityTotalText.setText(Double.toString(quantityTotalCard2).format("%.2f", quantityTotalCard2));
@@ -98,31 +97,31 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     public void increaseCard3(View view) {
-        TextView quantityText = (TextView) findViewById(R.id.card3_quantity);
+        TextView quantityText = findViewById(R.id.card3_quantity);
         quantityCard3 = Integer.parseInt(quantityText.getText().toString());
         quantityCard3++;
         quantityText.setText(Integer.toString(quantityCard3));
 
-        TextView priceText = (TextView) findViewById(R.id.card3_price);
+        TextView priceText = findViewById(R.id.card3_price);
         priceCard3 = Double.parseDouble(priceText.getText().toString());
 
-        TextView quantityTotalText = (TextView) findViewById(R.id.card3_subtotal);
+        TextView quantityTotalText = findViewById(R.id.card3_subtotal);
         quantityTotalCard3 = Double.parseDouble(quantityTotalText.getText().toString());
         quantityTotalCard3 += priceCard3;
         quantityTotalText.setText(Double.toString(quantityTotalCard3).format("%.2f", quantityTotalCard3));
     }
 
     public void decreaseCard3(View view) {
-        TextView quantityText = (TextView) findViewById(R.id.card3_quantity);
+        TextView quantityText = findViewById(R.id.card3_quantity);
         quantityCard3 = Integer.parseInt(quantityText.getText().toString());
         if (quantityCard3 > 0) {
             quantityCard3--;
             quantityText.setText(Integer.toString(quantityCard3));
 
-            TextView priceText = (TextView) findViewById(R.id.card3_price);
+            TextView priceText = findViewById(R.id.card3_price);
             priceCard3 = Double.parseDouble(priceText.getText().toString());
 
-            TextView quantityTotalText = (TextView) findViewById(R.id.card3_subtotal);
+            TextView quantityTotalText = findViewById(R.id.card3_subtotal);
             quantityTotalCard3 = Double.parseDouble(quantityTotalText.getText().toString());
             quantityTotalCard3 -= priceCard3;
             quantityTotalText.setText(Double.toString(quantityTotalCard3).format("%.2f", quantityTotalCard3));
@@ -130,8 +129,8 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     public void beforeTax() {
-        totalPrice = quantityTotalCard1 + quantityTotalCard2 + quantityCard3;
-        TextView beforeTaxTotal = (TextView)findViewById(R.id.checkoutPage_beforeTaxValue);
+        double totalPrice = quantityTotalCard1 + quantityTotalCard2 + quantityCard3;
+        TextView beforeTaxTotal = findViewById(R.id.checkoutPage_beforeTaxValue);
         beforeTaxTotal.setText(Double.toString(totalPrice).format("%.2f", totalPrice));
     }
 }
