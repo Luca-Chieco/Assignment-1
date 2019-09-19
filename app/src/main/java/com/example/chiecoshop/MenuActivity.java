@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 public class MenuActivity extends AppCompatActivity {
 
     private int quantityCard1;
@@ -17,6 +19,7 @@ public class MenuActivity extends AppCompatActivity {
     private double quantityTotalCard1;
     private double quantityTotalCard2;
     private double quantityTotalCard3;
+    private double totalPrice;
 
 
     @Override
@@ -124,5 +127,11 @@ public class MenuActivity extends AppCompatActivity {
             quantityTotalCard3 -= priceCard3;
             quantityTotalText.setText(Double.toString(quantityTotalCard3).format("%.2f", quantityTotalCard3));
         }
+    }
+
+    public void beforeTax() {
+        totalPrice = quantityTotalCard1 + quantityTotalCard2 + quantityCard3;
+        TextView beforeTaxTotal = (TextView)findViewById(R.id.checkoutPage_beforeTaxValue);
+        beforeTaxTotal.setText(Double.toString(totalPrice).format("%.2f", totalPrice));
     }
 }
