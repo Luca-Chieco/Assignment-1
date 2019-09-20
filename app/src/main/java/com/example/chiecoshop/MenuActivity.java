@@ -27,12 +27,15 @@ public class MenuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
     }
 
+    //Method to launch the checkout activity
     public void launchCheckoutActivity(View view) {
+        //Send the total amount of the items purchased
         Intent intent = new Intent(this, CheckoutActivity.class);
         intent.putExtra("beforeTax", beforeTaxTotal);
         startActivity(intent);
     }
 
+    //Increase quantity of item by 1, and update current subtotal for card 1
     public void increaseCard1(View view) {
         TextView quantityText = findViewById(R.id.card1_quantity);
         quantityCard1 = Integer.parseInt(quantityText.getText().toString());
@@ -49,6 +52,7 @@ public class MenuActivity extends AppCompatActivity {
         beforeTaxTotal += priceCard1;
     }
 
+    //Decrease quantity of item by 1, and update current subtotal for card 1
     public void decreaseCard1(View view) {
         TextView quantityText = findViewById(R.id.card1_quantity);
         quantityCard1 = Integer.parseInt(quantityText.getText().toString());
@@ -67,6 +71,7 @@ public class MenuActivity extends AppCompatActivity {
         }
     }
 
+    //Increase quantity of item by 1, and update current subtotal for card 2
     public void increaseCard2(View view) {
         TextView quantityText = findViewById(R.id.card2_quantity);
         quantityCard2 = Integer.parseInt(quantityText.getText().toString());
@@ -83,6 +88,7 @@ public class MenuActivity extends AppCompatActivity {
         beforeTaxTotal += priceCard2;
     }
 
+    //Decrease quantity of item by 1, and update current subtotal for card 2
     public void decreaseCard2(View view) {
         TextView quantityText = findViewById(R.id.card2_quantity);
         quantityCard2 = Integer.parseInt(quantityText.getText().toString());
@@ -101,6 +107,7 @@ public class MenuActivity extends AppCompatActivity {
         }
     }
 
+    //Increase quantity of item by 1, and update current subtotal for card 3
     public void increaseCard3(View view) {
         TextView quantityText = findViewById(R.id.card3_quantity);
         quantityCard3 = Integer.parseInt(quantityText.getText().toString());
@@ -117,6 +124,7 @@ public class MenuActivity extends AppCompatActivity {
         beforeTaxTotal += priceCard3;
     }
 
+    //Decrease quantity of item by 1, and update current subtotal for card 3
     public void decreaseCard3(View view) {
         TextView quantityText = findViewById(R.id.card3_quantity);
         quantityCard3 = Integer.parseInt(quantityText.getText().toString());

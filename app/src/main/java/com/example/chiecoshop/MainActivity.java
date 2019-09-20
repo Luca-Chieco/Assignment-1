@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    //Method to launch the menu activity
     public void launchMenuActivity(View view) {
         Intent intent = new Intent(this, MenuActivity.class);
         startActivity(intent);
