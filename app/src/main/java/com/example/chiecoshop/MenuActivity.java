@@ -19,7 +19,7 @@ public class MenuActivity extends AppCompatActivity {
     private double quantityTotalCard1;
     private double quantityTotalCard2;
     private double quantityTotalCard3;
-
+    private double beforeTaxTotal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +29,7 @@ public class MenuActivity extends AppCompatActivity {
 
     public void launchCheckoutActivity(View view) {
         Intent intent = new Intent(this, CheckoutActivity.class);
+        intent.putExtra("beforeTaxTotal", beforeTaxTotal);
         startActivity(intent);
     }
 
@@ -45,6 +46,7 @@ public class MenuActivity extends AppCompatActivity {
         quantityTotalCard1 = Double.parseDouble(quantityTotalText.getText().toString());
         quantityTotalCard1 += priceCard1;
         quantityTotalText.setText(Double.toString(quantityTotalCard1).format("%.2f", quantityTotalCard1));
+        beforeTaxTotal += priceCard1;
     }
 
     public void decreaseCard1(View view) {
@@ -61,6 +63,7 @@ public class MenuActivity extends AppCompatActivity {
             quantityTotalCard1 = Double.parseDouble(quantityTotalText.getText().toString());
             quantityTotalCard1 -= priceCard1;
             quantityTotalText.setText(Double.toString(quantityTotalCard1).format("%.2f", quantityTotalCard1));
+            beforeTaxTotal -= priceCard1;
         }
     }
 
@@ -77,6 +80,7 @@ public class MenuActivity extends AppCompatActivity {
         quantityTotalCard2 = Double.parseDouble(quantityTotalText.getText().toString());
         quantityTotalCard2 += priceCard2;
         quantityTotalText.setText(Double.toString(quantityTotalCard2).format("%.2f", quantityTotalCard2));
+        beforeTaxTotal += priceCard2;
     }
 
     public void decreaseCard2(View view) {
@@ -93,6 +97,7 @@ public class MenuActivity extends AppCompatActivity {
             quantityTotalCard2 = Double.parseDouble(quantityTotalText.getText().toString());
             quantityTotalCard2 -= priceCard2;
             quantityTotalText.setText(Double.toString(quantityTotalCard2).format("%.2f", quantityTotalCard2));
+            beforeTaxTotal -= priceCard2;
         }
     }
 
@@ -109,6 +114,7 @@ public class MenuActivity extends AppCompatActivity {
         quantityTotalCard3 = Double.parseDouble(quantityTotalText.getText().toString());
         quantityTotalCard3 += priceCard3;
         quantityTotalText.setText(Double.toString(quantityTotalCard3).format("%.2f", quantityTotalCard3));
+        beforeTaxTotal += priceCard3;
     }
 
     public void decreaseCard3(View view) {
@@ -125,12 +131,7 @@ public class MenuActivity extends AppCompatActivity {
             quantityTotalCard3 = Double.parseDouble(quantityTotalText.getText().toString());
             quantityTotalCard3 -= priceCard3;
             quantityTotalText.setText(Double.toString(quantityTotalCard3).format("%.2f", quantityTotalCard3));
+            beforeTaxTotal += priceCard3;
         }
-    }
-
-    public void beforeTax() {
-        double totalPrice = quantityTotalCard1 + quantityTotalCard2 + quantityCard3;
-        TextView beforeTaxTotal = findViewById(R.id.checkoutPage_beforeTaxValue);
-        beforeTaxTotal.setText(Double.toString(totalPrice).format("%.2f", totalPrice));
     }
 }
