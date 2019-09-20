@@ -29,7 +29,7 @@ public class MenuActivity extends AppCompatActivity {
 
     public void launchCheckoutActivity(View view) {
         Intent intent = new Intent(this, CheckoutActivity.class);
-        intent.putExtra("beforeTaxTotal", beforeTaxTotal);
+        intent.putExtra("beforeTax", beforeTaxTotal);
         startActivity(intent);
     }
 
